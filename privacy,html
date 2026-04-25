@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Puzz AI Privacy Policy">
+<meta name="theme-color" content="#FFE8D4">
+<title>Privacy Policy — Puzz AI</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary: #FFF8F2;
+  --bg-secondary: #FFE8D4;
+  --bg-card: #FFFFFF;
+  --accent: #E85D24;
+  --accent-light: #FF8B5E;
+  --accent-bg: #FFE4D4;
+  --text-primary: #1A1410;
+  --text-secondary: #6B5D52;
+  --text-muted: #9B8B7E;
+  --border: #EADFD2;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-pill: 999px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+nav {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); }
+
+.page-header {
+  text-align: center;
+  padding: 48px 0 64px;
+}
+
+.page-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.last-updated {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.content {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  margin-bottom: 64px;
+}
+
+.content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 40px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.content ul {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.content li {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.content a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.content a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.intro-callout {
+  background: var(--accent-bg);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--accent);
+}
+
+.intro-callout p {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 16px;
+}
+
+footer {
+  padding: 48px 0 32px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-copyright {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .content { padding: 28px 24px; }
+  .page-header { padding: 32px 0 48px; }
+  .footer-content { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">
+    <img src="logo.png" alt="Puzz AI logo">
+    <span class="brand-name">Puzz AI</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html" class="active">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</nav>
+
+<div class="container">
+  <header class="page-header">
+    <div class="page-badge">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: April 25, 2026</p>
+  </header>
+
+  <article class="content">
+
+    <div class="intro-callout">
+      <p><strong>The short version:</strong> Puzz AI keeps your food log on your device. We don't sell your data. We don't track you across the internet. We use AI to identify food in photos, but we don't store those photos beyond what you explicitly save.</p>
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>
+      Puzz AI ("we", "us", or "our") is the developer of the Puzz AI mobile application.
+      This Privacy Policy explains how we collect, use, and protect your information when you use the app.
+    </p>
+    <p>
+      Contact: <a href="mailto:datfam05@gmail.com">datfam05@gmail.com</a>
+    </p>
+
+    <h2>2. Information we collect</h2>
+
+    <h3>Information you provide</h3>
+    <p>When you set up Puzz AI, you provide:</p>
+    <ul>
+      <li><strong>Body metrics:</strong> height, weight, age, biological sex, activity level, and goal weight. Used to calculate your daily calorie target.</li>
+      <li><strong>Food log entries:</strong> meals you log via photo, text, or voice input.</li>
+      <li><strong>Water intake:</strong> daily hydration tracking entries.</li>
+      <li><strong>Weight history:</strong> entries you log to track progress over time.</li>
+      <li><strong>Coach conversations:</strong> messages you send to the AI nutrition coach.</li>
+    </ul>
+    <p>
+      All of this data is stored <strong>locally on your device</strong> by default. You can optionally enable iCloud sync to keep data consistent across your Apple devices — this uses Apple's encrypted CloudKit infrastructure and we have no access to it.
+    </p>
+
+    <h3>Information collected automatically</h3>
+    <ul>
+      <li><strong>Device identifiers:</strong> a randomly generated user ID is created for subscription management (via RevenueCat). This is not linked to your name or email.</li>
+      <li><strong>Crash data and diagnostics:</strong> if Puzz AI crashes, anonymous crash reports help us fix bugs. No personal data is included.</li>
+      <li><strong>Aggregate analytics:</strong> we use Firebase Analytics to understand which features are popular. Data is anonymized and aggregated.</li>
+    </ul>
+
+    <h3>Permissions you can grant</h3>
+    <p>Puzz AI requests these iOS permissions only when you choose to use a feature:</p>
+    <ul>
+      <li><strong>Camera:</strong> to take photos of meals for AI identification.</li>
+      <li><strong>Photo Library:</strong> to pick existing food photos.</li>
+      <li><strong>Microphone & Speech Recognition:</strong> for voice-based meal logging.</li>
+      <li><strong>Apple Health:</strong> to read weight and dietary energy from other apps and write your Puzz AI logs back to Health.</li>
+      <li><strong>Notifications:</strong> for meal reminders and streak nudges (optional).</li>
+    </ul>
+    <p>
+      You can revoke any of these permissions in iOS Settings at any time. The app will continue to function with reduced capability.
+    </p>
+
+    <h2>3. How we use your information</h2>
+    <p>We use your data only to:</p>
+    <ul>
+      <li>Provide the core tracking features (calorie estimation, progress charts, insights).</li>
+      <li>Calculate personalized targets based on your body metrics and goals.</li>
+      <li>Power the AI Coach with relevant context about your goals and recent meals.</li>
+      <li>Process subscription purchases via Apple's StoreKit and RevenueCat.</li>
+      <li>Improve the app through anonymized analytics.</li>
+      <li>Diagnose and fix crashes and bugs.</li>
+    </ul>
+    <p>
+      <strong>We do not sell your data, ever.</strong> We do not share your personal information with advertisers or marketing partners. We do not use your data to train AI models.
+    </p>
+
+    <h2>4. AI features and third-party processing</h2>
+    <p>
+      When you use AI features (photo scan, text parsing, voice parsing, Coach chat), the relevant input is sent to our backend infrastructure (a Cloudflare Worker), which then queries Google's Gemini API for processing.
+    </p>
+    <ul>
+      <li>Photo scans send the image to be analyzed for food identification. The image is processed in memory and not retained by us beyond the request.</li>
+      <li>Text and voice inputs are sent as text to the AI for parsing into structured food log entries.</li>
+      <li>Coach chat messages are sent along with relevant context (your goals, recent meals) so the coach can give personalized advice.</li>
+    </ul>
+    <p>
+      Google's API processing is governed by their <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">terms of service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>. Google has stated that data sent through their paid Gemini API is not used to train their models.
+    </p>
+    <p>
+      Network connectivity is required for AI features. The rest of the app works offline.
+    </p>
+
+    <h2>5. Data retention and deletion</h2>
+    <p>
+      Data stored on your device remains until you delete it manually or uninstall the app.
+      iCloud-synced data is retained according to Apple's iCloud terms.
+    </p>
+    <p>
+      <strong>Right to delete:</strong> You can clear all your data at any time:
+    </p>
+    <ul>
+      <li>Delete individual entries within the app.</li>
+      <li>Use the "Reset all data" option in Settings to wipe local storage.</li>
+      <li>Uninstall the app to remove all on-device data.</li>
+      <li>Disable iCloud sync in Settings to remove synced copies.</li>
+    </ul>
+    <p>
+      For RevenueCat subscription records, you can email us to request deletion of your randomly generated user ID. Note that this does not cancel active subscriptions — those must be managed through your Apple ID.
+    </p>
+
+    <h2>6. Children's privacy</h2>
+    <p>
+      Puzz AI is rated 4+ on the App Store and is not directed at children under 13.
+      We do not knowingly collect data from children under 13. If you believe a child has provided personal information,
+      please contact us and we will delete it.
+    </p>
+    <p>
+      The app includes safety guardrails that prevent users under 18 from setting unsafe weight loss goals.
+    </p>
+
+    <h2>7. International users and EU/UK rights</h2>
+    <p>
+      If you are located in the European Economic Area, the United Kingdom, or another jurisdiction with data protection laws,
+      you have rights including:
+    </p>
+    <ul>
+      <li><strong>Access:</strong> request a copy of the data we hold about you.</li>
+      <li><strong>Correction:</strong> request correction of inaccurate data.</li>
+      <li><strong>Deletion:</strong> request deletion of your data.</li>
+      <li><strong>Portability:</strong> request export of your data in a machine-readable format.</li>
+      <li><strong>Objection:</strong> object to certain types of processing.</li>
+    </ul>
+    <p>
+      To exercise any of these rights, email <a href="mailto:datfam05@gmail.com">datfam05@gmail.com</a>.
+      We will respond within 30 days.
+    </p>
+
+    <h2>8. Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Material changes will be communicated through the app
+      and posted at the top of this page with an updated "Last updated" date. Continued use of the app after changes
+      constitutes acceptance of the updated policy.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+      Questions, concerns, or requests related to this policy or your data:
+    </p>
+    <p>
+      Email: <a href="mailto:datfam05@gmail.com">datfam05@gmail.com</a>
+    </p>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:datfam05@gmail.com">Contact</a>
+    </div>
+    <div class="footer-copyright">
+      © 2026 Puzz AI
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
