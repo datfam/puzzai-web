@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Puzz AI Terms of Service">
+<meta name="theme-color" content="#FFE8D4">
+<title>Terms of Service — Puzz AI</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary: #FFF8F2;
+  --bg-secondary: #FFE8D4;
+  --bg-card: #FFFFFF;
+  --accent: #E85D24;
+  --accent-light: #FF8B5E;
+  --accent-bg: #FFE4D4;
+  --text-primary: #1A1410;
+  --text-secondary: #6B5D52;
+  --text-muted: #9B8B7E;
+  --border: #EADFD2;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-pill: 999px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+nav {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); }
+
+.page-header {
+  text-align: center;
+  padding: 48px 0 64px;
+}
+
+.page-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.last-updated {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.content {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 48px;
+  margin-bottom: 64px;
+}
+
+.content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 40px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.content p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.content ul {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.content li {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.content a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.content a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.intro-callout {
+  background: var(--accent-bg);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--accent);
+}
+
+.intro-callout p {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 16px;
+}
+
+.warning-callout {
+  background: #FFF4E0;
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-left: 4px solid #E5A025;
+}
+
+.warning-callout p {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 15px;
+}
+
+.warning-callout strong {
+  color: #B8770A;
+}
+
+footer {
+  padding: 48px 0 32px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-copyright {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .content { padding: 28px 24px; }
+  .page-header { padding: 32px 0 48px; }
+  .footer-content { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="brand">
+    <img src="logo.png" alt="Puzz AI logo">
+    <span class="brand-name">Puzz AI</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html" class="active">Terms</a>
+  </div>
+</nav>
+
+<div class="container">
+  <header class="page-header">
+    <div class="page-badge">Legal</div>
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: April 25, 2026</p>
+  </header>
+
+  <article class="content">
+
+    <div class="intro-callout">
+      <p><strong>The short version:</strong> Use Puzz AI to track your food and improve your habits. Don't use it as a substitute for medical advice. Subscriptions auto-renew until you cancel. Be kind to other users (when applicable) and don't try to break the app.</p>
+    </div>
+
+    <h2>1. Acceptance of terms</h2>
+    <p>
+      These Terms of Service ("Terms") govern your access to and use of the Puzz AI mobile application ("Puzz AI", "the app", "the Service")
+      operated by Puzz AI ("we", "us", "our"). By downloading, installing, or using the app, you agree to be bound by these Terms.
+    </p>
+    <p>
+      If you do not agree, do not use the app.
+    </p>
+
+    <h2>2. Eligibility</h2>
+    <p>
+      You must be at least 13 years old to use Puzz AI. Users under 18 must have parental or guardian consent.
+      The app is rated 4+ on the App Store but is not directed at children under 13.
+    </p>
+    <p>
+      If you are creating an account on behalf of a company or other entity, you represent that you have the authority to bind that entity to these Terms.
+    </p>
+
+    <h2>3. The Service</h2>
+    <p>
+      Puzz AI is a mobile application that helps users track meals, calories, and macronutrients using AI-powered photo recognition,
+      text and voice input, and a personalized AI coach. Features include daily and weekly insights, hydration tracking, weight tracking,
+      Apple Health integration, and home screen widgets.
+    </p>
+    <p>
+      We may add, remove, or modify features at any time. We will give reasonable notice for changes that materially reduce functionality available to paid subscribers.
+    </p>
+
+    <h2>4. Subscriptions and payments</h2>
+
+    <h3>Subscription tiers</h3>
+    <p>Puzz AI offers a free tier with limited functionality and a Pro tier with three subscription options:</p>
+    <ul>
+      <li><strong>Weekly:</strong> auto-renewing weekly subscription.</li>
+      <li><strong>Yearly:</strong> auto-renewing yearly subscription, with a 3-day free trial for new subscribers.</li>
+      <li><strong>Lifetime:</strong> one-time purchase, no recurring billing.</li>
+    </ul>
+
+    <h3>Billing</h3>
+    <p>
+      All subscriptions are processed by Apple via your iTunes / App Store account. Pricing displayed in the app reflects your local currency.
+    </p>
+    <ul>
+      <li>Payment is charged to your Apple ID at confirmation of purchase.</li>
+      <li>Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period.</li>
+      <li>Renewal is charged to your Apple ID within 24 hours of period end.</li>
+      <li>Free trials convert to paid subscriptions unless canceled at least 24 hours before the trial ends.</li>
+      <li>Lifetime purchases are non-recurring; you pay once and retain access permanently.</li>
+    </ul>
+
+    <h3>Cancellation</h3>
+    <p>
+      You can cancel an active subscription at any time through:
+    </p>
+    <p>
+      Settings → Apple ID → Subscriptions → Puzz AI → Cancel Subscription
+    </p>
+    <p>
+      Cancellation takes effect at the end of the current billing period. You will retain access to Pro features until then.
+    </p>
+
+    <h3>Refunds</h3>
+    <p>
+      All refund requests are handled by Apple per their standard refund policy.
+      Submit refund requests at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.
+      We do not have direct control over Apple's refund decisions.
+    </p>
+
+    <h2>5. Acceptable use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the app for any illegal purpose or in violation of any local, national, or international law.</li>
+      <li>Reverse engineer, decompile, or attempt to extract the source code of the app.</li>
+      <li>Use bots, scrapers, or automated tools to interact with the app or our backend.</li>
+      <li>Submit false, misleading, or harmful content to the AI Coach.</li>
+      <li>Attempt to disrupt the AI Coach with prompt injection or jailbreaking attempts.</li>
+      <li>Use the app in a way that could harm yourself or others (e.g., to enable disordered eating behaviors).</li>
+      <li>Resell, redistribute, or sublicense access to the app or its features.</li>
+    </ul>
+    <p>
+      We reserve the right to suspend or terminate access for users who violate these terms.
+    </p>
+
+    <h2>6. AI features and limitations</h2>
+
+    <div class="warning-callout">
+      <p>
+        <strong>Important:</strong> Puzz AI's calorie estimates are approximations generated by AI models.
+        They are <strong>not medically accurate</strong> and should be used as a tracking aid only,
+        not as the basis for medical, dietary, or therapeutic decisions.
+      </p>
+    </div>
+
+    <p>
+      AI-generated content (food identification, calorie estimates, coach responses) may contain errors or inaccuracies.
+      You should always use your own judgment when interpreting results.
+    </p>
+    <p>
+      The AI Coach provides general guidance based on commonly accepted nutrition principles. It is not a registered dietitian,
+      doctor, or medical professional. Do not use the AI Coach as a substitute for personalized medical or nutritional advice.
+    </p>
+    <p>
+      Network connectivity is required for AI features. We are not responsible for AI features being unavailable due to network issues
+      or third-party service disruptions.
+    </p>
+
+    <h2>7. Health disclaimer</h2>
+    <p>
+      Puzz AI is a wellness tracking tool, not a medical device. The information provided by the app
+      (calorie targets, macro recommendations, BMR calculations, AI Coach responses) is for general informational purposes only.
+    </p>
+    <p>
+      <strong>You should consult a qualified healthcare professional before:</strong>
+    </p>
+    <ul>
+      <li>Starting any weight loss or weight gain program.</li>
+      <li>Making significant changes to your diet.</li>
+      <li>Using Puzz AI if you have a history of eating disorders or other health conditions.</li>
+      <li>Using Puzz AI if you are pregnant, nursing, or have a medical condition that affects nutrition.</li>
+    </ul>
+    <p>
+      Puzz AI is not intended to diagnose, treat, cure, or prevent any disease.
+    </p>
+
+    <h2>8. Intellectual property</h2>
+    <p>
+      All content in the app — including text, graphics, logos, icons, the Puzz AI brand, app design, and source code —
+      is owned by Puzz AI or licensed to us, and is protected by copyright and other intellectual property laws.
+    </p>
+    <p>
+      You retain ownership of the content you submit (food log entries, photos, weight history). By submitting content,
+      you grant us a limited license to process it for the purpose of providing the Service to you (e.g., sending photos to AI for identification).
+    </p>
+
+    <h2>9. Privacy</h2>
+    <p>
+      Your use of Puzz AI is also governed by our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.
+    </p>
+
+    <h2>10. Disclaimer of warranties</h2>
+    <p>
+      Puzz AI is provided "as is" and "as available" without warranties of any kind, either express or implied,
+      including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, reliability,
+      or non-infringement.
+    </p>
+    <p>
+      We do not warrant that the app will be uninterrupted, error-free, secure, or that any defects will be corrected.
+    </p>
+
+    <h2>11. Limitation of liability</h2>
+    <p>
+      To the maximum extent permitted by law, Puzz AI shall not be liable for any indirect, incidental, special,
+      consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising from or related to
+      your use of the app, even if we have been advised of the possibility of such damages.
+    </p>
+    <p>
+      Our total liability to you for all claims arising from your use of the app shall not exceed the amount you paid for the app
+      in the 12 months preceding the claim.
+    </p>
+
+    <h2>12. Termination</h2>
+    <p>
+      We may suspend or terminate your access to the app at any time, with or without notice, for any reason,
+      including violation of these Terms. Upon termination:
+    </p>
+    <ul>
+      <li>Your right to use the app ceases immediately.</li>
+      <li>Active subscriptions will continue until the end of the current billing period unless you cancel through Apple.</li>
+      <li>Local data on your device is preserved until you delete it manually.</li>
+    </ul>
+
+    <h2>13. Changes to these terms</h2>
+    <p>
+      We may update these Terms from time to time. Material changes will be communicated through the app
+      and posted at the top of this page with an updated "Last updated" date. Continued use of the app after changes
+      constitutes acceptance of the updated Terms.
+    </p>
+
+    <h2>14. Governing law</h2>
+    <p>
+      These Terms are governed by the laws of the Socialist Republic of Vietnam, without regard to conflict of laws principles.
+      Any disputes arising from these Terms or your use of the app shall be resolved in the courts of Hanoi, Vietnam,
+      except where mandatory consumer protection laws of your country of residence apply.
+    </p>
+
+    <h2>15. Contact</h2>
+    <p>
+      Questions about these Terms:
+    </p>
+    <p>
+      Email: <a href="mailto:datfam05@gmail.com">datfam05@gmail.com</a>
+    </p>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:datfam05@gmail.com">Contact</a>
+    </div>
+    <div class="footer-copyright">
+      © 2026 Puzz AI
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
