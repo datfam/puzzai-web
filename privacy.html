@@ -268,13 +268,13 @@ footer {
   <header class="page-header">
     <div class="page-badge">Legal</div>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: April 25, 2026</p>
+    <p class="last-updated">Last updated: April 26, 2026</p>
   </header>
 
   <article class="content">
 
     <div class="intro-callout">
-      <p><strong>The short version:</strong> Puzz AI keeps your food log on your device. We don't sell your data. We don't track you across the internet. We use AI to identify food in photos, but we don't store those photos beyond what you explicitly save.</p>
+      <p><strong>The short version:</strong> Puzz AI keeps your food log on your device. We don't sell your data. Free users see rewarded video ads — these may use your device's advertising identifier (IDFA) only if you grant tracking permission. Pro users see no ads. AI features send your input to Google Gemini for processing and are not used to train models.</p>
     </div>
 
     <h2>1. Who we are</h2>
@@ -298,12 +298,13 @@ footer {
       <li><strong>Coach conversations:</strong> messages you send to the AI nutrition coach.</li>
     </ul>
     <p>
-      All of this data is stored <strong>locally on your device</strong> by default. You can optionally enable iCloud sync to keep data consistent across your Apple devices — this uses Apple's encrypted CloudKit infrastructure and we have no access to it.
+      All of this data is stored <strong>locally on your device</strong> by default. You can optionally enable iCloud sync to keep data consistent across your Apple devices — this uses Apple's CloudKit infrastructure and we have no access to it.
     </p>
 
     <h3>Information collected automatically</h3>
     <ul>
       <li><strong>Device identifiers:</strong> a randomly generated user ID is created for subscription management (via RevenueCat). This is not linked to your name or email.</li>
+      <li><strong>Advertising identifier (IDFA):</strong> if you grant App Tracking Transparency permission, your device's advertising identifier is shared with Google AdMob to serve more relevant ads. If you decline, only non-personalized ads are shown and IDFA is not used. See <strong>Section 5 — Advertising</strong> for details.</li>
       <li><strong>Crash data and diagnostics:</strong> if Puzz AI crashes, anonymous crash reports help us fix bugs. No personal data is included.</li>
       <li><strong>Aggregate analytics:</strong> we use Firebase Analytics to understand which features are popular. Data is anonymized and aggregated.</li>
     </ul>
@@ -313,9 +314,10 @@ footer {
     <ul>
       <li><strong>Camera:</strong> to take photos of meals for AI identification.</li>
       <li><strong>Photo Library:</strong> to pick existing food photos.</li>
-      <li><strong>Microphone & Speech Recognition:</strong> for voice-based meal logging.</li>
-      <li><strong>Apple Health:</strong> to read weight and dietary energy from other apps and write your Puzz AI logs back to Health.</li>
+      <li><strong>Microphone &amp; Speech Recognition:</strong> for voice-based meal logging.</li>
+      <li><strong>Apple Health:</strong> to read steps, active energy, and weight from other apps and write your Puzz AI logs (meals, water, weight) back to Health.</li>
       <li><strong>Notifications:</strong> for meal reminders and streak nudges (optional).</li>
+      <li><strong>App Tracking Transparency:</strong> requested approximately 5 seconds after launch. If granted, your IDFA is used to personalize ads. If declined, ads still appear but use no tracking identifier.</li>
     </ul>
     <p>
       You can revoke any of these permissions in iOS Settings at any time. The app will continue to function with reduced capability.
@@ -328,11 +330,15 @@ footer {
       <li>Calculate personalized targets based on your body metrics and goals.</li>
       <li>Power the AI Coach with relevant context about your goals and recent meals.</li>
       <li>Process subscription purchases via Apple's StoreKit and RevenueCat.</li>
+      <li>Serve advertisements to free-tier users (Pro subscribers see no ads). See <strong>Section 5</strong>.</li>
       <li>Improve the app through anonymized analytics.</li>
       <li>Diagnose and fix crashes and bugs.</li>
     </ul>
     <p>
-      <strong>We do not sell your data, ever.</strong> We do not share your personal information with advertisers or marketing partners. We do not use your data to train AI models.
+      <strong>We do not sell your data to data brokers.</strong> We do not share your food log, body metrics, weight history, or Coach conversations with advertisers. Advertising data sharing is limited to what is described in Section 5 below, and only when you grant tracking permission.
+    </p>
+    <p>
+      <strong>We do not use your personal data to train AI models.</strong> Inputs sent to the Gemini API are processed and discarded — Google has confirmed that paid Gemini API requests are not used for model training.
     </p>
 
     <h2>4. AI features and third-party processing</h2>
@@ -351,7 +357,43 @@ footer {
       Network connectivity is required for AI features. The rest of the app works offline.
     </p>
 
-    <h2>5. Data retention and deletion</h2>
+    <h2>5. Advertising</h2>
+    <p>
+      Free-tier users see <strong>rewarded video ads</strong> when they choose to unlock additional AI scans beyond their daily free quota. The flow is opt-in — ads only play after you tap "Watch Ad". <strong>Pro subscribers never see ads.</strong>
+    </p>
+
+    <h3>Who serves the ads</h3>
+    <p>
+      Ads are served by <strong>Google AdMob</strong>, Google's mobile ad network. AdMob may share data with its own advertising partners as described in Google's <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Ads Privacy &amp; Terms</a>.
+    </p>
+
+    <h3>What is shared with AdMob</h3>
+    <p>The following information is shared with Google AdMob and its partners <em>only</em> when you trigger a rewarded ad:</p>
+    <ul>
+      <li><strong>Device identifiers:</strong> if you grant App Tracking Transparency permission, your IDFA (Identifier for Advertisers) is shared. If you decline, AdMob receives a non-tracking identifier only.</li>
+      <li><strong>Approximate location:</strong> derived from IP address, used for regional ad targeting and frequency capping.</li>
+      <li><strong>Device information:</strong> device type, OS version, screen size, language, and time zone.</li>
+      <li><strong>Ad interaction events:</strong> whether the ad loaded, was viewed, completed, or clicked.</li>
+    </ul>
+    <p>
+      <strong>What is NOT shared with AdMob or any ad partner:</strong> your food log, body metrics, photos, weight history, water intake, or Coach conversations. Your fitness data stays inside Puzz AI.
+    </p>
+
+    <h3>Personalized vs. non-personalized ads</h3>
+    <ul>
+      <li><strong>If you grant ATT permission:</strong> AdMob may serve personalized ads based on your IDFA and other signals. Google may use this data to track you across apps and websites for advertising purposes.</li>
+      <li><strong>If you decline ATT permission:</strong> AdMob serves only non-personalized (contextual) ads. No persistent tracking identifier is used.</li>
+    </ul>
+    <p>
+      You can change your ATT decision at any time: <strong>iOS Settings → Privacy &amp; Security → Tracking → Puzz AI</strong>.
+    </p>
+
+    <h3>Removing ads</h3>
+    <p>
+      Subscribing to any Pro tier (Weekly, Yearly, or Lifetime) removes all ads. See our <a href="terms.html">Terms of Service</a> for subscription details.
+    </p>
+
+    <h2>6. Data retention and deletion</h2>
     <p>
       Data stored on your device remains until you delete it manually or uninstall the app.
       iCloud-synced data is retained according to Apple's iCloud terms.
@@ -368,18 +410,24 @@ footer {
     <p>
       For RevenueCat subscription records, you can email us to request deletion of your randomly generated user ID. Note that this does not cancel active subscriptions — those must be managed through your Apple ID.
     </p>
+    <p>
+      For ad-related data held by Google AdMob, see Google's <a href="https://safety.google/privacy/data/" target="_blank" rel="noopener">data deletion controls</a>.
+    </p>
 
-    <h2>6. Children's privacy</h2>
+    <h2>7. Children's privacy</h2>
     <p>
       Puzz AI is rated 4+ on the App Store and is not directed at children under 13.
       We do not knowingly collect data from children under 13. If you believe a child has provided personal information,
       please contact us and we will delete it.
     </p>
     <p>
+      Advertisements served via AdMob are configured to comply with Google's family-friendly content policies. We do not target ads at users under 13. If you suspect a minor is using the app, please ensure they have parental supervision and consider enabling iOS Screen Time or content restrictions.
+    </p>
+    <p>
       The app includes safety guardrails that prevent users under 18 from setting unsafe weight loss goals.
     </p>
 
-    <h2>7. International users and EU/UK rights</h2>
+    <h2>8. International users and EU/UK rights</h2>
     <p>
       If you are located in the European Economic Area, the United Kingdom, or another jurisdiction with data protection laws,
       you have rights including:
@@ -389,21 +437,22 @@ footer {
       <li><strong>Correction:</strong> request correction of inaccurate data.</li>
       <li><strong>Deletion:</strong> request deletion of your data.</li>
       <li><strong>Portability:</strong> request export of your data in a machine-readable format.</li>
-      <li><strong>Objection:</strong> object to certain types of processing.</li>
+      <li><strong>Objection:</strong> object to certain types of processing, including advertising.</li>
+      <li><strong>Withdraw consent:</strong> revoke ATT permission at any time via iOS Settings.</li>
     </ul>
     <p>
       To exercise any of these rights, email <a href="mailto:datfam05@gmail.com">datfam05@gmail.com</a>.
       We will respond within 30 days.
     </p>
 
-    <h2>8. Changes to this policy</h2>
+    <h2>9. Changes to this policy</h2>
     <p>
       We may update this Privacy Policy from time to time. Material changes will be communicated through the app
       and posted at the top of this page with an updated "Last updated" date. Continued use of the app after changes
       constitutes acceptance of the updated policy.
     </p>
 
-    <h2>9. Contact</h2>
+    <h2>10. Contact</h2>
     <p>
       Questions, concerns, or requests related to this policy or your data:
     </p>
